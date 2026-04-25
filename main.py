@@ -20,7 +20,9 @@ def main():
         elif choice == 2: deposited_money()
         elif choice == 3: withdraw_money()
         elif choice == 4: statement()
-        elif choice == 5: break
+        elif choice == 5: 
+            print("Thank you for using Abhishek's ATM. Have a nice day!")
+            break
         else: print("Invalid Choice. Please try again.")
 
 main()
