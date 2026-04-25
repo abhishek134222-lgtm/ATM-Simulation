@@ -3,9 +3,8 @@ def statement():
     print(" ================== Mini Statement =================")
 
     print("Recent transactions:")
-    account_no = int(input("Enter your account number : "))
-    pin = int(input("Enter your pin : "))
-    if account_no in utils.transactions and pin == utils.transactions[account_no]['pin']:
+    access, account_no = utils.access_account()
+    if access:
         print("Current balance: ", utils.transactions[account_no]['balance'])
         for amount in utils.transactions[account_no]['deposited_history'][::-1]:
             print("Deposited: ", amount)
